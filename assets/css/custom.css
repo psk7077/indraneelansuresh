@@ -173,6 +173,7 @@
     #main {
         margin-left: 26%;
         width: calc(100% - 26%);
+        padding-top: 3em;
     }
 }
 
@@ -184,7 +185,7 @@
     #main {
         margin-left: 24%;
         width: calc(100% - 24%);
-        padding: 5em 3em 3em 3em;
+        padding: 3em 3em 3em 3em;
     }
 }
 

@@ -102,16 +102,13 @@
     border-bottom-color: rgba(138, 48, 16, 0.5);
 }
 
-/* --- Left sidebar: color, width, centering --- */
+/* --- Left sidebar: color (all screen sizes) --- */
 #header {
     background-color: #0d1b2a;
     background-image: none;
-    width: 26%;
-    padding: 5em 2.5em;
-    text-align: center;
-    align-items: center;
 }
 
+/* --- Left sidebar: avatar, text, nav (all screen sizes) --- */
 #header > .inner {
     display: flex;
     flex-direction: column;
@@ -120,7 +117,7 @@
 }
 
 #header .image.avatar {
-    width: 9em;
+    width: 8em;
     margin: 0 0 1.25em 0;
 }
 
@@ -161,7 +158,21 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 1280px) {
+/* --- Desktop sidebar: width, padding, positioning --- */
+@media screen and (min-width: 981px) {
+    #header {
+        width: 26%;
+        padding: 5em 2.5em;
+        text-align: center;
+        align-items: center;
+    }
+    #main {
+        margin-left: 26%;
+        width: calc(100% - 26%);
+    }
+}
+
+@media screen and (min-width: 981px) and (max-width: 1280px) {
     #header {
         width: 24%;
         padding: 4em 2em;
@@ -173,10 +184,19 @@
     }
 }
 
-@media screen and (min-width: 981px) {
-    #main {
-        margin-left: 26%;
-        width: calc(100% - 26%);
+/* --- Mobile sidebar tweaks --- */
+@media screen and (max-width: 980px) {
+    #header .image.avatar {
+        width: 6.5em;
+    }
+    #header h1 {
+        font-size: 1.5em;
+    }
+    #header .tamil-name {
+        font-size: 1em;
+    }
+    .site-nav {
+        margin-top: 1.2em;
     }
 }
 

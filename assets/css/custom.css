@@ -511,3 +511,12 @@
     border-color: transparent;
     color: #fff;
 }
+
+/* Uniformly sized tile images (crop to fill, no stretching) */
+.work-item .tile-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
